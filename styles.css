@@ -149,27 +149,34 @@ header{
 
 .header--buttons{
     position: fixed;
+    display: flex;
     top: 20px;
     left: 20px;
     font-size: 1.5rem;
     line-height: 1;
     z-index: 100;
 }
+
 .top-button{
-    margin-right: 20px;
+    margin-right: 50px;
     cursor: pointer;
-    display: inline-block;
 }
 
-#moon.active{
-    background-color: red;
-    animation: testing 3s ease forwards;
+.darktheme--button{
+    display: flex;
 }
 
-@keyframes testing {
-    from { transform: translateX(0);}
-    to { transform: translateX(100px);}
+#moon{
+    position: absolute;
+    display: block;
 }
+
+#sun{
+    display: none;
+}
+
+
+
 
 .avatar{
     margin-top: -100px;
