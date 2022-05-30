@@ -1,10 +1,14 @@
 //Dark theme button
 const darkButton = document.getElementsByClassName("darktheme--button")[0];
 const darkTheme = document.querySelectorAll(".main-color, .secondary-color, .highlight");
+const moonIcon = document.getElementById("moon");
+const sunIcon = document.getElementById("sun");
 
 darkButton.addEventListener("click", changeDarkMode)
 
 function changeDarkMode (){
+    moonIcon.classList.toggle("animout");
+    sunIcon.classList.toggle("animout");
     darkTheme.forEach(el => {
         el.classList.toggle("light");
     })
