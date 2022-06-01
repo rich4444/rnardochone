@@ -12,6 +12,9 @@ html *{
     font-family: "Nunito", sans-serif;
     list-style: none;
 }
+html, body{
+    height: 100%;
+}
 :root{ 
     --main-dark-color: #121b51;
     --secondary-dark-color: #243a7e;
@@ -346,7 +349,7 @@ nav ul li{
 }
 
 .project{
-    width: min(700px, 80%);
+    width: min(700px, 90%);
     display: flex;
     gap: 20px;
 }
@@ -363,7 +366,7 @@ nav ul li{
     gap: 40px;
 }
 
-.projectInfo h3{
+h3{
     font-size: 1.5rem;
     margin-bottom: -5px;
 }
@@ -379,7 +382,7 @@ nav ul li{
     display: grid;
     margin: auto;    
     margin-top: 50px;
-    width: min(700px, 80%);
+    width: min(700px, 90%);
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 20px;
 }
@@ -389,12 +392,6 @@ nav ul li{
     flex-direction: column;
     align-items: center;
     gap: 10px;
-}
-
-.projectItem h3{
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: -10px;
 }
 
 .projectPreviewImage{
@@ -415,7 +412,7 @@ nav ul li{
 .sectionDescription{
     text-align: center;
     margin: auto;
-    width: min(700px, 80%);
+    width: min(700px, 90%);
 }
 
 
