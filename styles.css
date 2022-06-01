@@ -512,29 +512,10 @@ nav ul li{
         flex-direction: column;
         align-items: center;        
     }
-
     
-    .projectPreview{
-        width: 80%;
-        height: 200px;
-        background-color: var(--main-light-color);
-        background-image: url(./img/projectPreviewPlaceholder.png);
-        background-size: contain;
-        background-position: center;
-        border-radius: 10px;
-        box-shadow: inset 0px 0px 5px black;
+    .waves{
+        aspect-ratio: 5;
     }
-
-.projectPreview:hover{
-    background-size:cover;
-}
-
-.projectInfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 }
 
 @media (hover:none){
