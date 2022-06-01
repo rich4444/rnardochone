@@ -1,6 +1,6 @@
 //Dark theme button
 const darkButton = document.getElementsByClassName("darktheme--button")[0];
-const darkTheme = document.querySelectorAll(".main-color, .secondary-color, .highlight");
+const darkTheme = document.querySelectorAll(".main-color, .secondary-color, .highlight, .waves-main-color, .waves-secondary-color");
 const moonIcon = document.getElementById("moon");
 const sunIcon = document.getElementById("sun");
 

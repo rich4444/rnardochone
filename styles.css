@@ -27,28 +27,37 @@ html *{
 /*#region color manager*/
 .main-color{
     background-color: var(--main-dark-color);
-    fill: var(--main-dark-color);
     color: var(--main-light-color);
     transition: all .5s;
 }
-
-.main-color.light {
+.main-color.light{
     background-color: var(--main-light-color);
-    fill: var(--main-light-color);
     color: var(--main-dark-color);
 }
 
 .secondary-color{
     background-color: var(--secondary-dark-color);
-    fill: var(--secondary-dark-color);
     color: var(--main-light-color);
     transition: all .5s;
 }
-
 .secondary-color.light{
     background-color: var(--secondary-light-color);
-    fill: var(--secondary-light-color);
     color: var(--main-dark-color);
+}
+
+.waves-main-color{
+    color: var(--main-dark-color);
+    transition: all .5s;
+}
+.waves-main-color.light{
+    color: var(--main-light-color);
+}
+.waves-secondary-color {
+    color: var(--secondary-dark-color);
+    transition: all .5s;
+}
+.waves-secondary-color.light {
+    color: var(--secondary-light-color);
 }
 
 .highlight{
@@ -66,10 +75,6 @@ html *{
     position: absolute;
     bottom: 0;
     left: 0;
-}
-
-.parallax{
-    transition: all 0.1469s;
 }
 
 .parallax > use{
@@ -502,6 +507,9 @@ nav ul li{
     }
     .hideOnBig{
         display: block;
+    }
+    .singleIcon{
+        justify-content: space-between;
     }
     
     .button{
