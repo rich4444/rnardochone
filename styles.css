@@ -71,6 +71,48 @@ html, body{
     color: var(--highlight-dark-color);
 }
 /*#endregion color manager*/
+.balls-container{
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: -2;
+    pointer-events: none;
+}
+
+.ball{
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    aspect-ratio: 1;
+    background-color: var(--secondary-dark-color);
+    border-radius: 50%;
+    animation: balls-animation 6s ease infinite;
+    pointer-events: none;
+}
+
+.ball:nth-of-type(odd){
+    animation-delay: 0.5s;
+}
+.ball:nth-of-type(3n+3){
+    animation-delay: 1s;
+}
+
+@keyframes balls-animation{	  
+    from{
+        transform: scale(.1) translateY(0);
+        opacity: 0;
+    }  
+    to{
+        transform:  scale(1) translateY(-100vh);
+        opacity: 0;
+    }
+    50% {   
+        opacity: 1;
+    }
+}
 
 /*#region Waves Style */
 .waves{
@@ -78,6 +120,7 @@ html, body{
     position: absolute;
     bottom: 0;
     left: 0;
+    z-index: -1;
 }
 
 .parallax > use{
@@ -111,6 +154,11 @@ html, body{
 }
 /*#endregion Waves*/
 
+
+/*#region balls */
+
+/*#endregion balls */
+
 /*#region general styles*/
 h1{
     font-size: 2.5rem;
@@ -125,6 +173,7 @@ article{
 section{
     padding: 50px 0;
     position: relative;
+    z-index: -5;
 }
 
 /* Section Titles */
@@ -201,6 +250,7 @@ header{
     align-items: center;
     text-align: center;
     overflow: hidden;
+    z-index: -5;
 }
 
 .header--buttons{
