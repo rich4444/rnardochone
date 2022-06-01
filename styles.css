@@ -153,6 +153,7 @@ section{
 /* Buttons */
 .button{
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px;
@@ -340,20 +341,9 @@ nav ul li{
 }
 
 .project{
-    width: min(700px, 100%);
+    width: min(700px, 80%);
     display: flex;
     gap: 20px;
-}
-
-.projectPreview{
-    width: 350px;
-    height: 200px;
-    background-color: var(--main-light-color);
-    background-image: url(./img/projectPreviewPlaceholder.png);
-    background-size: contain;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: inset 0px 0px 5px black;
 }
 
 .projectPreview:hover{
@@ -361,9 +351,11 @@ nav ul li{
 }
 
 .projectInfo{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 40px;
 }
 
 .projectInfo h3{
@@ -376,14 +368,6 @@ nav ul li{
     margin-top: 5px;
     list-style: none;
 }
-
-.projectButtons{
-    display: flex;
-    justify-content: left;
-    gap: 20px;
-}
-
-
 
 /*#region other projects*/
 .gridContainer{
@@ -437,12 +421,12 @@ nav ul li{
     display:grid;
 }
 
-#article-practices .projectPreviewImage > img {
+.projectPreviewImage > img, .coverImage:not() {
     transform: scale(1);
     object-fit: cover;
     transition: all 0.3s;
 }
-#article-practices .projectPreviewImage > img:hover {
+.projectPreviewImage > img:hover, .coverImage:not() {
     transform: scale(1.1);
 }
 /*#endregion practicas*/
@@ -484,13 +468,18 @@ nav ul li{
 
 .buttons-container{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    gap: 10px;
 }
 
 .singleIcon{
     padding: 8px 15px;
+    justify-content: center;
+}
+
+.hideOnBig{
+    display: none;
 }
 
 #article-games > .projectItem:last-child{
@@ -499,3 +488,57 @@ nav ul li{
 /*#endregion GAMEDEVELOPMENT*/
 
 /*#endregion other projects*/
+
+
+
+
+@media screen and (max-width: 800px){
+    body{
+        font-size: 20px;
+    }
+    .buttons-container{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .hideOnBig{
+        display: block;
+    }
+    
+    .button{
+        padding: 10px 30px;
+    }      
+
+    .project{        
+        flex-direction: column;
+        align-items: center;        
+    }
+
+    
+    .projectPreview{
+        width: 80%;
+        height: 200px;
+        background-color: var(--main-light-color);
+        background-image: url(./img/projectPreviewPlaceholder.png);
+        background-size: contain;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: inset 0px 0px 5px black;
+    }
+
+.projectPreview:hover{
+    background-size:cover;
+}
+
+.projectInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+}
+
+@media (hover:none){
+    .coverImage{
+        opacity: 0;
+    }
+}
