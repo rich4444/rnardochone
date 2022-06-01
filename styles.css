@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
+    list-style: none;
+}
+html *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    list-style: none;
 }
 :root{ 
     --main-dark-color: #121b51;
@@ -15,12 +23,13 @@
     --highlight-dark-color: #166064;
 }
 
+
 /*#region color manager*/
 .main-color{
     background-color: var(--main-dark-color);
     fill: var(--main-dark-color);
     color: var(--main-light-color);
-    transition: all 0.5s;
+    transition: all .5s;
 }
 
 .main-color.light {
@@ -33,7 +42,7 @@
     background-color: var(--secondary-dark-color);
     fill: var(--secondary-dark-color);
     color: var(--main-light-color);
-    transition: all 0.5s;
+    transition: all .5s;
 }
 
 .secondary-color.light{
@@ -57,6 +66,10 @@
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.parallax{
+    transition: all 0.1469s;
 }
 
 .parallax > use{
@@ -305,6 +318,7 @@ nav{
 }
 
 nav ul{
+    margin: 0;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -395,8 +409,8 @@ nav ul li{
 }
 
 .projectPreviewImage{
-    width: minmax(min(500px, 50%));
     position: relative;
+    width: fit-content;
     aspect-ratio: 16/9; 
     background-color: var(--main-light-color);
     border-radius: 10px;
