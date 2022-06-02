@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,45 +27,7 @@
 <body>
     <!--HEADER-->
     <header class="main-color">
-        <div class="balls-container secondary-color">
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-            <div class="ball"></div>
-        </div>
-
+        
         <div class="header--buttons">
             <div class="top-button darktheme--button">
                 <div id="moon" class="dkButton">
@@ -101,6 +61,12 @@
             <p class="scroll-text">SCROLL DOWN</p>
             <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </div>    
+
+        <a href="#">
+            <div id="back-button" class="main-color">
+                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+            </div>
+        </a>
         
         <div class="waves-secondary-color">
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -119,31 +85,38 @@
     </header>
 
     
-
-    <!-- First Section PROJECTS-->
-    <section class="secondary-color">
-    <!-- NAVBAR -->
+    <!-- NAVBAR -->      
     <nav class="secondary-color">
-        <ul>
-            <li><p>PROYECTOS</p></li>
-            <li><p>HABILIDADES</p></li>
-            <li><p>SOBRE MI</p></li>
-            <li><p>CONTACTO</p></li>
+        <ul id="navbar">
+            <a href="#proyectos"><li><p>PROYECTOS</p></li></a>
+            <a href="#habilidades"><li><p>HABILIDADES</p></li></a>
+            <a href="#about"><li><p>SOBRE MI</p></li></a>
+            <a href="#contacto"><li><p>CONTACTO</p></li></a>
         </ul>
     </nav>
+
+    <!-- First Section PROJECTS-->
+    <section class="secondary-color" id="#proyectos">
+        <div class="sectionAnchor" id="proyectos"></div>
         <article>
-            <h1 class="sectionTitle highlight"><span>PROYECTOS</span></h1>
-            <div class="projectsContainer">
+            <h1 class="sectionTitle highlight"><span>PROYECTOS</span></h1>       
+
+            <div class="projectsContainer">     
+                <p class="sectionDescription">Estas son algunas de las paginas reales que he hecho.<br />Todos mis proyectos son responsive y mobile-first, e intento adelantarme a las necesidades del cliente, para proveer no solo un buen diseño sino también una buena funcionalidad.</p>
 
                 <div class="project">
                     <div class="projectPreviewImage">
-                        <img src="./img/projectPreviewPlaceholder.png" alt="">
+                        <img src="./img/casastella-preview.webp" alt="preview of the website on different devices">
                     </div>
                     <div class="projectInfo">
                         <div class="projectText">                            
-                            <h3>NOMBRE NEGOCIO</h3>
-                            <p>Landing page para un negocio</p>
+                            <h2>Casa Stella</h2>
+                            <p>Landing page para un residencial de personas mayores.</p>
                             <ul>
+                                <li>
+                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Diseño completo</p>
+                                </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Responsive Design</p>
@@ -154,7 +127,7 @@
                                 </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
-                                    &nbsp Diseño completo</p>
+                                    &nbsp Botón personalizado a Whatsapp</p>
                                 </li>
                             </ul>
                         </div>
@@ -179,16 +152,24 @@
 
                 <div class="project">
                     <div class="projectPreviewImage">
-                        <img src="./img/projectPreviewPlaceholder.png" alt="">
+                        <img src="./img/dalfoto-preview.webp" alt="preview of the website on different devices">
                     </div>
                     <div class="projectInfo">
                         <div class="projectText">                            
-                            <h3>NOMBRE NEGOCIO</h3>
-                            <p>Landing page para un negocio</p>
+                            <h2>Dal Fotografías</h2>
+                            <p>Landing page para un estudio de fotos. Con multiples paginas.</p>
                             <ul>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Diseño completo</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Responsive Design</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Responsive Navbar</p>
                                 </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
@@ -196,7 +177,15 @@
                                 </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
-                                    &nbsp Diseño completo</p>
+                                    &nbsp Botón personalizado a Whatsapp y redes sociales</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Galerías de fotos en slider</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Paginas auxiliares para los servicios</p>
                                 </li>
                             </ul>
                         </div>
@@ -221,76 +210,98 @@
 
                 <div class="project">
                     <div class="projectPreviewImage">
-                        <img src="./img/projectPreviewPlaceholder.png" alt="">
+                        <img src="./img/misprincesas-preview.webp" alt="preview of the website on different devices">
                     </div>
                     <div class="projectInfo">
                         <div class="projectText">                            
-                            <h3>NOMBRE NEGOCIO</h3>
-                            <p>Landing page para un negocio</p>
+                            <h2>E-Comerce</h2>
+                            <p>E-Comerce para un negocio de ropa</p>
                             <ul>
+                                <li>
+                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Diseño completo</p>
+                                </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Responsive Design</p>
                                 </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
-                                    &nbsp Botones y formularios funcionales</p>
+                                    &nbsp Carrito y checkout con mercadopagos</p>
                                 </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
-                                    &nbsp Diseño completo</p>
+                                    &nbsp Artículos con filtros de búsqueda</p>
+                                </li>
+                                <li>
+                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Diseñado con REACT</p>
+                                </li>
+                                <li>
+                                    <p style="color: red; font-weight:900">
+                                    <i class="fa-solid fa-x"></i>
+                                    &nbsp ¡Trabajo en proceso!</p>
                                 </li>
                             </ul>
                         </div>
-                        <div class="buttons-container">
-                            <a href="#">                                
-                                <div class="button main-color">
-                                    <i class="fa fa-globe" aria-hidden="true"></i>
-                                    <p>Live Site</p>
-                                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <a href="#">                                
-                                <div class="button main-color">
-                                    <i class="fa fa-github" aria-hidden="true"></i>
-                                    <p>Code</p>
-                                    <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
                 </div>
                     
             </div>
         </article>
 
-        
         <article>
             <h1 class="sectionTitle highlight"><span>PRACTICAS</span></h1>
-            <p class="sectionDescription">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, quam? lorem*5</p>
+            <p class="sectionDescription">Pequeños proyectos que he ido haciendo en mi proceso de aprendizaje.</p>
 
-            <div id="article-practices" class="gridContainer">
+            <div class="gridContainer">
 
                 <div class="projectItem">
-                    <h3>MEMORY GAME</h3>
-                    <div class="projectPreviewImage">
-                        <img src="./img/projectPreviewPlaceholder.png" alt="">
-                    </div>
-                    <a href="#" class="buttons-container">                                
+                    <h2>MEMORY GAME</h2>
+                    
+                    <iframe height="300" style="width: 100%;" scrolling="no" title="Memory Game" src="https://codepen.io/rn4444/embed/preview/jOZMpwM?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/rn4444/pen/jOZMpwM">
+                        Memory Game</a> by Ricardo (<a href="https://codepen.io/rn4444">@rn4444</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+
+                    <a href="https://codepen.io/rn4444/pen/jOZMpwM" target="_blank" class="buttons-container">                                
                         <div class="button main-color">
                             <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <p>Code</p>
+                            <p>Codepen</p>
                             <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
                         </div>
                     </a>
                 </div>
 
                 <div class="projectItem">
-                    <h3>TODOLIST</h3>
-                    <div class="projectPreviewImage">
-                        <img src="./img/projectPreviewPlaceholder.png" alt="">
-                    </div>
-                    <a href="#" class="buttons-container">                                
+                    <h2>TODOLIST</h2>
+
+                    <iframe height="300" style="width: 100%;" scrolling="no" title="Todolist" src="https://codepen.io/rn4444/embed/preview/vYdNxaQ?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/rn4444/pen/vYdNxaQ">
+                    Todolist</a> by Ricardo (<a href="https://codepen.io/rn4444">@rn4444</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                    </iframe>
+
+                    <a href="https://codepen.io/rn4444/pen/vYdNxaQ" target="_blank" class="buttons-container">                                
+                        <div class="button main-color">
+                            <i class="fa fa-codepen" aria-hidden="true"></i>
+                            <p>Codepen</p>
+                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+
+                
+                <div class="projectItem">
+                    <h2>EXPENSE TRACKER</h2>
+
+                    <iframe height="300" style="width: 100%;" scrolling="no" title="Expense Tracker" src="https://codepen.io/rn4444/embed/preview/gOvPZQQ?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/rn4444/pen/gOvPZQQ">
+                        Expense Tracker</a> by Ricardo (<a href="https://codepen.io/rn4444">@rn4444</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
+                    
+                    <a href="https://codepen.io/rn4444/pen/gOvPZQQ" target="_blank" class="buttons-container">                                
                         <div class="button main-color">
                             <i class="fa fa-codepen" aria-hidden="true"></i>
                             <p>Code</p>
@@ -301,26 +312,15 @@
 
                 
                 <div class="projectItem">
-                    <h3>E. TRACKER</h3>
-                    <div class="projectPreviewImage">
-                        <img src="./img/projectPreviewPlaceholder.png" alt="">
-                    </div>
-                    <a href="#" class="buttons-container">                                
-                        <div class="button main-color">
-                            <i class="fa fa-codepen" aria-hidden="true"></i>
-                            <p>Code</p>
-                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                </div>
+                    <h2>DIGITAL CLOCK</h2>
+                    
+                    <iframe height="300" style="width: 100%;" scrolling="no" title="Digital Clock" src="https://codepen.io/rn4444/embed/preview/MWQeJEQ?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                        See the Pen <a href="https://codepen.io/rn4444/pen/MWQeJEQ">
+                        Digital Clock</a> by Ricardo (<a href="https://codepen.io/rn4444">@rn4444</a>)
+                        on <a href="https://codepen.io">CodePen</a>.
+                      </iframe>
 
-                
-                <div class="projectItem">
-                    <h3>DIGITAL CLOCK</h3>
-                    <div class="projectPreviewImage">
-                        <img src="./img/projectPreviewPlaceholder.png" alt="">
-                    </div>
-                    <a href="#" class="buttons-container">                                
+                    <a href="https://codepen.io/rn4444/pen/MWQeJEQ" target="_blank" class="buttons-container">                                
                         <div class="button main-color">
                             <i class="fa fa-codepen" aria-hidden="true"></i>
                             <p>Code</p>
@@ -334,15 +334,16 @@
 
         <article>
             <h1 class="sectionTitle highlight"><span>GAME DEVELOPMENT</span></h1>
-            <p class="sectionDescription">Algunos de los videojuegos que he hecho, para PC, Web, y Android. Si bien no son juegos comerciales, me siento satisfecho que con cada uno he ido aprendiendo cosas nuevas. <br /><br />Todos fueron programados y diseñados por mi.</p>
+            <p class="sectionDescription">Algunos de los videojuegos que he hecho, para PC, Web, y Android. <br/> Si bien no son juegos comerciales, me siento satisfecho que con cada uno he ido aprendiendo cosas nuevas. <br /><br />Todos fueron programados y diseñados por mi.</p>
 
-            <div id="article-games" class="gridContainer">
+            <div class="gridContainer">
 
                 <div class="projectItem">
-                    <h3>ADVENTURE'S MAZE</h3>
-                    <div class="projectPreviewImage">
-                            <img src="./img/games/game1.gif" alt="">
-                            <img class="coverImage" src="./img/games/game1.png" alt="">
+                    <h2>ADVENTURE'S MAZE</h2>
+                        <div class="projectPreviewImage">
+                            <video class="gameImage" src="./img/games/game1.webm" alt="game preview video" autoplay loop>
+                            </video>
+                            <img class="coverImage gameImage" src="./img/games/game1.webp" alt="game screenshot">
                         <div class="plataforms-container">
                             <i class="fa fa-laptop" aria-hidden="true"></i>
                         </div>
@@ -366,10 +367,11 @@
                 </div>
 
                 <div class="projectItem">
-                    <h3>MIRROR QUEST</h3>
+                    <h2>MIRROR QUEST</h2>
                     <div class="projectPreviewImage">
-                            <img src="./img/games/game2.gif" alt="">
-                            <img class="coverImage" src="./img/games/game2.png" alt="">
+                            <video class="gameImage"  src="./img/games/game2.webm" alt="game preview video" autoplay loop>
+                            </video>
+                            <img class="coverImage gameImage" src="./img/games/game2.webp" alt="game screenshot">
                         <div class="plataforms-container">
                             <i class="fa fa-laptop" aria-hidden="true"></i>
                         </div>
@@ -393,10 +395,10 @@
                 </div>
                 
                 <div class="projectItem">
-                    <h3>CONQUEST of the OS</h3>
+                    <h2>CONQUEST of the OS</h2>
                     <div class="projectPreviewImage">
-                            <img src="./img/games/game3.gif" alt="">
-                            <img class="coverImage" src="./img/games/game3.png" alt="">
+                            <video class="gameImage"  src="./img/games/game3.webm" alt="game preview video" autoplay loop></video>
+                            <img class="coverImage gameImage" src="./img/games/game3.webp" alt="game screenshot">
                         <div class="plataforms-container">
                             <i class="fa fa-laptop" aria-hidden="true"></i>
                             <i class="fa fa-android" aria-hidden="true"></i>
@@ -427,11 +429,11 @@
                     </div>    
                 </div>
 
-                <div class="projectItem">
-                    <h3>Assault on the RF</h3>
+                <div class="projectItem" id="lastItem">
+                    <h2>Assault on the RF</h2>
                     <div class="projectPreviewImage">
-                            <img src="./img/games/game4.gif" alt="">
-                            <img class="coverImage" src="./img/games/game4.png" alt="">
+                            <video class="gameImage"  src="./img/games/game4.webm" alt="game preview video" autoplay loop></video>
+                            <img class="coverImage gameImage" src="./img/games/game4.webp" alt="game screenshot">
                         <div class="plataforms-container">
                             <i class="fa fa-laptop" aria-hidden="true"></i>
                             <i class="fa fa-android" aria-hidden="true"></i>
@@ -473,11 +475,34 @@
                 </g>
             </svg>
         </div>
+
+        
     </section>
 
 
+    <section class="main-color" id="#habilidades">
+        <div class="sectionAnchor" id="habilidades"></div>
+        <article>
+            <h1 class="sectionTitle highlight"><span>HABILIDADES</span></h1>    
+        </article>
 
-    <section class="main-color">
+    </section>
+
+    
+    <section class="secondary-color" id="#about">
+        <div class="sectionAnchor" id="about"></div>
+        <article>
+            <h1 class="sectionTitle highlight"><span>SOBRE MI</span></h1> 
+        </article> 
+
+    </section>
+
+    
+    <section class="main-color" id="#contacto">
+        <div class="sectionAnchor" id="contacto"></div>
+        <article>
+            <h1 class="sectionTitle highlight"><span>CONTACTO</span></h1>
+        </article>  
 
     </section>
 </body>
