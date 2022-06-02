@@ -13,8 +13,8 @@ if (localStorage.getItem("darkTheme") == "light") {
 }
 
 function changeDarkMode() {
-  moonIcon.classList.toggle("animout");
-  sunIcon.classList.toggle("animout");
+  moonIcon.classList.toggle("anim");
+  sunIcon.classList.toggle("anim");
   darkTheme.forEach((el) => {
     el.classList.toggle("light");
   });
@@ -27,6 +27,12 @@ function changeDarkMode() {
 //Scroll down icon and back to top button
 const scrollIcon = document.getElementsByClassName("scroll-icon")[0];
 const backButton = document.getElementById("back-button");
+const header = document.querySelector("header");
+
+backButton.addEventListener("click", () =>{
+  header.scrollIntoView();
+});
+
 
 function hideScrollIcon() {
   if (window.scrollY > 200) {
@@ -39,9 +45,27 @@ function hideScrollIcon() {
   }
 }
 
-//scroll spy
+//Navbar
 const sections = document.querySelectorAll("section");
-const navlinks = document.querySelectorAll("#navbar a");
+const navLinks = document.querySelectorAll("#navbar li");
+
+//Navbar links
+navLinks.forEach(link => link.addEventListener("click", () =>{
+  closeNavBar();
+  goToSection(link.getAttribute("id"));
+}))
+
+function goToSection (id){
+  target = [...sections].find(x => x.getAttribute("id")+"Nav" == id);
+  target.scrollIntoView();
+}
+
+//Scroll Spy
+scrollSpy();
+window.onscroll = () => {
+  hideScrollIcon();
+  scrollSpy();
+};
 
 function scrollSpy() {
   sections.forEach((sec) => {
@@ -51,9 +75,9 @@ function scrollSpy() {
     let id = sec.getAttribute("id");
 
     if (top >= offset - 150 && top < offset + height - 150) {
-      navlinks.forEach((link) => {
-        let ref = link.getAttribute("href");
-        if (ref == id) {
+      navLinks.forEach((link) => {
+        let ref = link.getAttribute("id");
+        if (ref.includes(id)) {
           link.classList.add("highlight");
         } else {
           link.classList.remove("highlight");
@@ -62,15 +86,9 @@ function scrollSpy() {
     }
   });
   if (window.scrollY < 300) {
-    navlinks.forEach((link) => link.classList.remove("highlight"));
+    navLinks.forEach((link) => link.classList.remove("highlight"));
   }
 }
-
-window.onscroll = () => {
-  hideScrollIcon();
-  scrollSpy();
-};
-
 
 //Language button
 const langButton = document.getElementsByClassName("language--button")[0];
@@ -91,8 +109,8 @@ if(/^en\b/.test(navigator.language)){
 }
 
 function languageSpanish (){
-    engIcon.classList.add("animout");
-    espIcon.classList.remove("animout");
+    engIcon.classList.add("anim");
+    espIcon.classList.remove("anim");
     engText.forEach((e) => {
         e.classList.add("hideText");
     })
@@ -101,8 +119,8 @@ function languageSpanish (){
     })
 }
 function languageEnglish (){
-    engIcon.classList.remove("animout");
-    espIcon.classList.add("animout");
+    engIcon.classList.remove("anim");
+    espIcon.classList.add("anim");
     engText.forEach((e) => {
         e.classList.remove("hideText");
     })
@@ -112,9 +130,40 @@ function languageEnglish (){
 }
 
 function changeLanguage() {
-    if(engIcon.classList.contains("animout")){
+    if(engIcon.classList.contains("anim")){
         languageEnglish();
     } else {
         languageSpanish();
     }
   }
+
+
+
+
+//Sandwich navbar
+const openButton = document.getElementById("showNav");
+const closeButton = document.getElementById("hideNav");
+const openCloseButtons = document.getElementsByClassName("navBarButtons")[0];
+const ulList = document.getElementById("navbar");
+
+window.addEventListener('resize', () => {
+  if(openCloseButtons.offsetParent === null){
+    closeNavBar();
+  }
+});
+
+openButton.addEventListener("click", () => {
+  closeButton.style.display = "block";
+  ulList.classList.add("openNav");
+  openButton.style.display = "none";
+});
+
+closeButton.addEventListener("click", () => {
+  closeNavBar();
+});
+
+function closeNavBar() {
+  closeButton.style.display = "none";
+  ulList.classList.remove("openNav");
+  openButton.style.display = "block";
+}

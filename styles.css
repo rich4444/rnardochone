@@ -19,6 +19,7 @@ html {
   min-height: -webkit-fill-available;
   height: fill-available;
   scroll-behavior: smooth;
+  scroll-padding-top: 50px;
 }
 :root {
   --main-dark-color: #121b51;
@@ -132,10 +133,6 @@ section {
   min-height: 200vh;
 }
 
-.sectionAnchor {
-  transform: translateY(-50px);
-}
-
 /* Section Titles */
 .sectionTitle {
   overflow: hidden;
@@ -202,8 +199,6 @@ section {
 
 a {
   text-decoration: none;
-  color: inherit;
-  cursor: default;
 }
 
 /*#endregion general*/
@@ -218,8 +213,7 @@ header {
   position: relative;
   height: 100vh;
   padding: 50px 0;
-
-  min-height: -webkit-fill-available;
+  /* min-height: -webkit-fill-available; */
   height: fill-available;
   display: flex;
   flex-direction: column;
@@ -257,7 +251,7 @@ header {
   transition: all 0.5s;
 }
 
-.dkButton.animout {
+.dkButton.anim {
   opacity: 0;
   transform: rotate(180deg);
 }
@@ -269,7 +263,7 @@ header {
     transform: rotate(0);
     transition: all 0.5s;
 }
-.langButton.animout{
+.langButton.anim{
     opacity: 0;
     transform: rotate(180deg);
 }
@@ -390,10 +384,15 @@ header {
 /*#region navbar*/
 nav {
   position: sticky;
+  display: block;
   top: 0;
   font-size: 1.1rem;
   z-index: 10;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navBarButtons{
+  display: none;
 }
 
 nav ul {
@@ -409,29 +408,27 @@ nav ul li {
   cursor: pointer;
   font-weight: 700;
 }
+nav ul li:hover {
+  color: var(--highlight-color);
+}
+.light + nav ul li:hover, .light + nav ul li.highlight {
+  color: var(--highlight-dark-color);
+}
 
-nav ul li a::after {
+/* Line under */
+nav ul li::after {
   display: block;
   cursor: pointer;
   content: "";
   border-bottom: solid 3px var(--highlight-color);
-  transition: transform 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
   transform: scaleX(0);
 }
-.light + nav ul li a::after {
+.light + nav ul li::after {
   border-bottom: solid 3px var(--highlight-dark-color);
 }
-nav ul li a.highlight::after {
+nav ul li.highlight::after, nav ul li:hover::after{
   transform: scaleX(1);
-}
-nav ul li:hover a::after {
-  transform: scaleX(1);
-}
-nav ul li:hover {
-  color: var(--highlight-color);
-}
-.light + nav ul li:hover {
-  color: var(--highlight-dark-color);
 }
 
 #back-button {
@@ -631,6 +628,41 @@ video {
 
   .waves {
     aspect-ratio: 5;
+  }
+
+  /* NAVBAR */  
+  .navBarButtons{
+    display: block;
+    font-size: 1.5rem;  
+    text-align: right;
+    line-height: 1; 
+    cursor: pointer;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-end;
+    padding: 0;
+    margin-top: 20px;
+    transition: all 0.5s ease;
+    display: none;
+  }
+  
+  nav ul.openNav{
+    display: flex;
+  }
+
+  nav{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  #hideNav{
+    display: none;
   }
 }
 

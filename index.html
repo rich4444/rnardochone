@@ -37,12 +37,12 @@
                 <div id="moon" class="dkButton">
                     <i class="fa fa-moon-o" aria-hidden="true"></i>
                 </div>
-                <div id="sun" class="dkButton animout">
+                <div id="sun" class="dkButton anim">
                     <i class="fas fa-sun    "></i>
                 </div>
             </div>
             <div class="top-button language--button">
-                <p id="engIcon" class="langButton animout">ENG</p>
+                <p id="engIcon" class="langButton anim">ENG</p>
                 <p id="espIcon" class="langButton">ESP</p>
             </div>
         </div>
@@ -67,11 +67,9 @@
             <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </div>    
 
-        <a href="#" alt="Go back to the top of the page">
-            <div id="back-button" class="main-color">
-                <i class="fa fa-angle-double-up" aria-hidden="true"></i>
-            </div>
-        </a>
+        <div id="back-button" class="main-color">
+            <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+        </div>
         
         <div class="waves-secondary-color">
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -92,29 +90,32 @@
     
     <!-- NAVBAR -->      
     <nav class="secondary-color">
+        <div class="navBarButtons">
+            <i id="hideNav" class="fa-solid fa-x"></i>
+            <i id="showNav" class="fa fa-bars" aria-hidden="true"></i>
+        </div>
         <ul id="navbar">
-            <li><a href="#proyectos">
+            <li id="projectsNav">
                 <p class="esp">PROYECTOS</p>
                 <p class="eng hideText">PROJECTS</p>
-            </a></li>
-            <li><a href="#habilidades">
+            </li>
+            <li id="skillsNav">
                 <p class="esp">HABILIDADES</p>
                 <p class="eng hideText">SKILLS</p>
-            </a></li>
-            <li><a href="#about">
+            </li>
+            <li id="aboutNav">
                 <p class="esp">SOBRE MI</p>
                 <p class="eng hideText">ABOUT ME</p>
-            </a></li>
-            <li><a href="#contacto">
+            </li>
+            <li id="contactNav">
                 <p class="esp">CONTACTO</p>
                 <p class="eng hideText">CONTACT</p>
-            </a></li>
+            </li>
         </ul>
     </nav>
 
     <!-- First Section PROJECTS-->
-    <section class="secondary-color" id="#proyectos">
-        <div class="sectionAnchor" id="proyectos"></div>
+    <section class="secondary-color" id="projects">
         <article>
             <h1 class="sectionTitle highlight"><span>
                 <p class="esp">PROYECTOS</p><p class="eng hideText">PROJECTS</p>
@@ -540,8 +541,7 @@
     </section>
 
 
-    <section class="main-color" id="#habilidades">
-        <div class="sectionAnchor" id="habilidades"></div>
+    <section class="main-color" id="skills">
         <article>
             <h1 class="sectionTitle highlight"><span>
                 <p class="esp">HABILIDADES</p>
@@ -567,8 +567,7 @@
     </section>
 
     
-    <section class="secondary-color" id="#about">
-        <div class="sectionAnchor" id="about"></div>
+    <section class="secondary-color" id="about">
         <article>
             <h1 class="sectionTitle highlight"><span>
                 <p class="esp">SOBRE MI</p>
@@ -594,8 +593,7 @@
     </section>
 
     
-    <section class="main-color" id="#contacto">
-        <div class="sectionAnchor" id="contacto"></div>
+    <section class="main-color" id="contact">
         <article>
             <h1 class="sectionTitle highlight"><span>
                 <p class="esp">CONTACTO</p>
