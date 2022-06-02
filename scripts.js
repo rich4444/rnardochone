@@ -70,3 +70,51 @@ window.onscroll = () => {
   hideScrollIcon();
   scrollSpy();
 };
+
+
+//Language button
+const langButton = document.getElementsByClassName("language--button")[0];
+const engIcon = document.getElementById("engIcon");
+const espIcon = document.getElementById("espIcon");
+const engText = document.querySelectorAll(".eng");
+const espText = document.querySelectorAll(".esp");
+
+langButton.addEventListener("click", e => {
+    changeLanguage()
+})
+
+
+var userLang = navigator.language || navigator.userLanguage;
+
+if(/^en\b/.test(navigator.language)){
+    languageEnglish();
+}
+
+function languageSpanish (){
+    engIcon.classList.add("animout");
+    espIcon.classList.remove("animout");
+    engText.forEach((e) => {
+        e.classList.add("hideText");
+    })
+    espText.forEach((e) => {
+        e.classList.remove("hideText");
+    })
+}
+function languageEnglish (){
+    engIcon.classList.remove("animout");
+    espIcon.classList.add("animout");
+    engText.forEach((e) => {
+        e.classList.remove("hideText");
+    })
+    espText.forEach((e) => {
+        e.classList.add("hideText");
+    })
+}
+
+function changeLanguage() {
+    if(engIcon.classList.contains("animout")){
+        languageEnglish();
+    } else {
+        languageSpanish();
+    }
+  }

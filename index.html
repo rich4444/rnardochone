@@ -42,7 +42,8 @@
                 </div>
             </div>
             <div class="top-button language--button">
-                <i class="fa fa-language" aria-hidden="true"></i>
+                <p id="engIcon" class="langButton animout">ENG</p>
+                <p id="espIcon" class="langButton">ESP</p>
             </div>
         </div>
 
@@ -53,8 +54,8 @@
             <div class="changing--text">
                 <ul>
                     <li><p>FULLSTACK</p></li>
-                    <li><p>PROGRAMADOR</p></li>
-                    <li><p>DISEÑADOR</p></li>
+                    <li><p class="esp">PROGRAMADOR</p><p class="eng hideText">PROGRAMMER</p></li>
+                    <li><p class="esp">DISEÑADOR</p><p class="eng hideText">DESIGNER</p></li>
                     <li><p>FRONTEND</p></li>
                     <li><p>GAME DEV.</p></li>
                 </ul>
@@ -62,7 +63,7 @@
         </div>
 
         <div class="scroll-icon">
-            <p class="scroll-text">SCROLL DOWN</p>
+            <div class="scroll-text"><p class="eng hideText">SCROLL DOWN</p><p class="esp">DESPLÁZATE HACIA ABAJO</p></div>
             <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </div>    
 
@@ -92,10 +93,22 @@
     <!-- NAVBAR -->      
     <nav class="secondary-color">
         <ul id="navbar">
-            <li><a href="#proyectos"><p>PROYECTOS</p></a></li>
-            <li><a href="#habilidades"><p>HABILIDADES</p></a></li>
-            <li><a href="#about"><p>SOBRE MI</p></a></li>
-            <li><a href="#contacto"><p>CONTACTO</p></a></li>
+            <li><a href="#proyectos">
+                <p class="esp">PROYECTOS</p>
+                <p class="eng hideText">PROJECTS</p>
+            </a></li>
+            <li><a href="#habilidades">
+                <p class="esp">HABILIDADES</p>
+                <p class="eng hideText">SKILLS</p>
+            </a></li>
+            <li><a href="#about">
+                <p class="esp">SOBRE MI</p>
+                <p class="eng hideText">ABOUT ME</p>
+            </a></li>
+            <li><a href="#contacto">
+                <p class="esp">CONTACTO</p>
+                <p class="eng hideText">CONTACT</p>
+            </a></li>
         </ul>
     </nav>
 
@@ -103,10 +116,13 @@
     <section class="secondary-color" id="#proyectos">
         <div class="sectionAnchor" id="proyectos"></div>
         <article>
-            <h1 class="sectionTitle highlight"><span>PROYECTOS</span></h1>       
+            <h1 class="sectionTitle highlight"><span>
+                <p class="esp">PROYECTOS</p><p class="eng hideText">PROJECTS</p>
+            </span></h1>       
 
             <div class="projectsContainer">     
-                <p class="sectionDescription">Estas son algunas de las paginas reales que he hecho.<br />Todos mis proyectos son responsive y mobile-first, e intento adelantarme a las necesidades del cliente, para proveer no solo un buen diseño sino también una buena funcionalidad.</p>
+                <p class="sectionDescription esp">Estas son algunas de las paginas reales que he hecho.<br />Todos mis proyectos son responsive y mobile-first, e intento adelantarme a las necesidades del cliente, para proveer no solo un buen diseño sino también una buena funcionalidad.</p>
+                <p class="sectionDescription eng hideText">These are some of the websites that I have made.<br />All of my projects are responsive, and I design them with the mobile-first aproach. I also try to get ahead of the client's need, to provide not only a good design, but also a good functionality.</p>
 
                 <div class="project">
                     <div class="projectPreviewImage">
@@ -115,31 +131,39 @@
                     <div class="projectInfo">
                         <div class="projectText">                            
                             <h2>Casa Stella</h2>
-                            <p>Landing page para un residencial de personas mayores.</p>
+                            <p class="esp">Landing page para un residencial de personas mayores.</p>
+                            <p class="eng hideText">Landing page for a nursing home.</p>
                             <ul>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Diseño completo</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Fully Designed</p>
                                 </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Responsive Design</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Botones y formularios funcionales</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Functional buttons and forms</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Botón personalizado a Whatsapp</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Customize Whatsapp button</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="buttons-container">
                             <a href="https://casastella.me/" target="_blank">                                
                                 <div class="button main-color">
-                                    <i class="fa fa-globe" aria-hidden="true"></i>
-                                    <p>Live Site</p>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <p class="esp">Sitio</p>
+                                    <p class="eng hideText">Live Site</p>
                                     <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
                                 </div>
                             </a>
@@ -161,11 +185,14 @@
                     <div class="projectInfo">
                         <div class="projectText">                            
                             <h2>Dal Fotografías</h2>
-                            <p>Landing page para un estudio de fotos. Con multiples paginas.</p>
+                            <p class="esp">Landing page para un estudio de fotos. Con multiples paginas.</p>
+                            <p class="eng hideText">Landing page photo studio, using multiple pages.</p>
                             <ul>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Diseño completo</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Fully Designed</p>
                                 </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
@@ -176,28 +203,37 @@
                                     &nbsp Responsive Navbar</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Botones y formularios funcionales</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Functional buttons and forms</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
-                                    &nbsp Botón personalizado a Whatsapp y redes sociales</p>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Botón personalizado a Whatsapp y a redes sociales</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Customize Whatsapp and social network buttons</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Galerías de fotos en slider</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Slideshow gallery</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Paginas auxiliares para los servicios</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Multipage for the services</p>
                                 </li>
                             </ul>
                         </div>
                         <div class="buttons-container">
                             <a href="https://rich4444.github.io/estudiodefotos/" target="_blank">                                
                                 <div class="button main-color">
-                                    <i class="fa fa-globe" aria-hidden="true"></i>
-                                    <p>Live Site</p>
+                                    <i class="fa-solid fa-globe"></i>
+                                    <p class="esp">Sitio</p>
+                                    <p class="eng hideText">Live Site</p>
                                     <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
                                 </div>
                             </a>
@@ -219,32 +255,44 @@
                     <div class="projectInfo">
                         <div class="projectText">                            
                             <h2>E-Comerce</h2>
-                            <p>E-Comerce para un negocio de ropa</p>
+                            <p class="esp">E-Comerce para un negocio de ropa</p>
+                            <p class="eng hideText">E-Comerce for a clothing store</p>
                             <ul>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Diseño completo</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Fully Designed</p>
                                 </li>
                                 <li>
                                     <p><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Responsive Design</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Carrito y checkout con mercadopagos</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Cart and checkout using mercadopagos</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
-                                    &nbsp Artículos con filtros de búsqueda</p>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Lista de artículos con filtros de búsqueda</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Articles with search filters</p>
                                 </li>
                                 <li>
-                                    <p><i class="fa fa-check" aria-hidden="true"></i>
+                                    <p class="esp"><i class="fa fa-check" aria-hidden="true"></i>
                                     &nbsp Diseñado con REACT</p>
+                                    <p class="eng hideText"><i class="fa fa-check" aria-hidden="true"></i>
+                                    &nbsp Designed using REACT</p>
                                 </li>
                                 <li>
-                                    <p style="color: rgb(255, 102, 0); font-weight:900">
+                                    <p class="esp" style="color: rgb(255, 102, 0); font-weight:900">
                                     <i class="fa-solid fa-x"></i>
                                     &nbsp ¡Trabajo en proceso!</p>
+                                    <p class="eng hideText" style="color: rgb(255, 102, 0); font-weight:900">
+                                    <i class="fa-solid fa-x"></i>
+                                    &nbsp Work In Progress!</p>
                                 </li>
                             </ul>
                         </div>
@@ -254,8 +302,12 @@
         </article>
 
         <article>
-            <h1 class="sectionTitle highlight"><span>PRACTICAS</span></h1>
-            <p class="sectionDescription">Pequeños proyectos que he ido haciendo en mi proceso de aprendizaje.</p>
+            <h1 class="sectionTitle highlight"><span>
+                <p class="esp">PRACTICAS</p>
+                <p class="eng hideText">PRACTICES</p>
+            </span></h1>
+            <p class="sectionDescription esp">Pequeños proyectos que he ido haciendo en mi proceso de aprendizaje.</p>
+            <p class="sectionDescription eng hideText">Small projects I have made as I was learning.</p>
 
             <div class="gridContainer">
 
@@ -337,8 +389,12 @@
         </article>
 
         <article>
-            <h1 class="sectionTitle highlight"><span>GAME DEVELOPMENT</span></h1>
-            <p class="sectionDescription">Algunos de los videojuegos que he hecho, para PC, Web, y Android. <br/> Si bien no son juegos comerciales, me siento satisfecho que con cada uno he ido aprendiendo cosas nuevas. <br /><br />Todos fueron programados y diseñados por mi.</p>
+            <h1 class="sectionTitle highlight"><span>
+                <p class="esp">DESARROLLO DE VIDEOJUEGOS</p>
+                <p class="eng hideText">GAME DEVELOPMENT</p>
+            </span></h1>
+            <p class="sectionDescription esp">Algunos de los videojuegos que he hecho, para PC, Web, y Android. <br/> Si bien no son juegos comerciales, me siento satisfecho que con cada uno he ido aprendiendo cosas nuevas. <br /><br />Todos fueron programados y diseñados por mi.</p>
+            <p class="sectionDescription eng hideText">Some of the videogames that I have made, for PC, Web, and Android. <br/> While these are not even close to commercial games, I still feel satisfied that with each of them I have learn something new.<br /><br />All of them were code and designed by myself.</p>
 
             <div class="gridContainer">
 
@@ -487,7 +543,10 @@
     <section class="main-color" id="#habilidades">
         <div class="sectionAnchor" id="habilidades"></div>
         <article>
-            <h1 class="sectionTitle highlight"><span>HABILIDADES</span></h1>    
+            <h1 class="sectionTitle highlight"><span>
+                <p class="esp">HABILIDADES</p>
+                <p class="eng hideText">SKILLS</p>
+            </span></h1>    
         </article>
 
         <div class="waves-secondary-color">
@@ -511,7 +570,10 @@
     <section class="secondary-color" id="#about">
         <div class="sectionAnchor" id="about"></div>
         <article>
-            <h1 class="sectionTitle highlight"><span>SOBRE MI</span></h1> 
+            <h1 class="sectionTitle highlight"><span>
+                <p class="esp">SOBRE MI</p>
+                <p class="eng hideText">ABOUT MYSELF</p>
+            </span></h1> 
         </article> 
 
         <div class="waves-main-color">
@@ -535,7 +597,10 @@
     <section class="main-color" id="#contacto">
         <div class="sectionAnchor" id="contacto"></div>
         <article>
-            <h1 class="sectionTitle highlight"><span>CONTACTO</span></h1>
+            <h1 class="sectionTitle highlight"><span>
+                <p class="esp">CONTACTO</p>
+                <p class="eng hideText">CONTACT</p>
+            </span></h1>
         </article>  
 
         <div class="waves-secondary-color">

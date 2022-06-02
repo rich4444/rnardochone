@@ -208,6 +208,11 @@ a {
 
 /*#endregion general*/
 
+/* Languages */
+.hideText{
+    display: none;
+}
+
 /*#region header*/
 header {
   position: relative;
@@ -255,6 +260,18 @@ header {
 .dkButton.animout {
   opacity: 0;
   transform: rotate(180deg);
+}
+
+.langButton{
+    font-weight: 900;
+    position: absolute;
+    opacity: 1;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+.langButton.animout{
+    opacity: 0;
+    transform: rotate(180deg);
 }
 
 .avatar {
@@ -339,7 +356,7 @@ header {
   animation: bounce 2s ease infinite;
 }
 
-.scroll-icon:hover .scroll-text {
+.scroll-icon:hover .scroll-text p{
   opacity: 1;
 }
 
