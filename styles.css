@@ -357,6 +357,10 @@ nav ul li{
     font-weight: 700;
 }
 
+nav ul li a{
+    cursor: pointer;
+}
+
 nav ul li:hover{
     color: var(--highlight-color);
 }

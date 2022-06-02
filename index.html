@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="Frontend portfolio of ricardo nardochone programmer backend fullstack">    
+    <meta name="theme-color" content="#121b51">
+    <meta name="google" content="notranslate">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
@@ -17,6 +21,7 @@
     <script src="https://kit.fontawesome.com/e26da2372a.js" crossorigin="anonymous"></script>
 
     <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./img/favico.ico">
 
     <script src="scripts.js" defer></script>
 
@@ -26,7 +31,7 @@
 </head>
 <body>
     <!--HEADER-->
-    <header class="main-color">
+    <header class="main-color" id="top">
         
         <div class="header--buttons">
             <div class="top-button darktheme--button">
@@ -62,7 +67,7 @@
             <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </div>    
 
-        <a href="#">
+        <a href="#top">
             <div id="back-button" class="main-color">
                 <i class="fa fa-angle-double-up" aria-hidden="true"></i>
             </div>
@@ -88,10 +93,10 @@
     <!-- NAVBAR -->      
     <nav class="secondary-color">
         <ul id="navbar">
-            <a href="#proyectos"><li><p>PROYECTOS</p></li></a>
-            <a href="#habilidades"><li><p>HABILIDADES</p></li></a>
-            <a href="#about"><li><p>SOBRE MI</p></li></a>
-            <a href="#contacto"><li><p>CONTACTO</p></li></a>
+            <li><a href="#proyectos"><p>PROYECTOS</p></a></li>
+            <li><a href="#habilidades"><p>HABILIDADES</p></a></li>
+            <li><a href="#about"><p>SOBRE MI</p></a></li>
+            <li><a href="#contacto"><p>CONTACTO</p></a></li>
         </ul>
     </nav>
 
@@ -238,7 +243,7 @@
                                     &nbsp Diseñado con REACT</p>
                                 </li>
                                 <li>
-                                    <p style="color: red; font-weight:900">
+                                    <p style="color: rgb(255, 102, 0); font-weight:900">
                                     <i class="fa-solid fa-x"></i>
                                     &nbsp ¡Trabajo en proceso!</p>
                                 </li>
