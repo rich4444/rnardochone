@@ -278,7 +278,7 @@ header {
   margin-top: -100px;
   width: 150px;
   height: 150px;
-  background-image: url(./img/avatar.png);
+  background-image: url(./img/avatar.webp);
   background-size: contain;
   background-position: center;
 }
@@ -703,14 +703,55 @@ video {
 }
 
 .profilePicture{
+  position: relative;
   width:  min(300px, 100%);
   border-top-left-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-.profilePicture > img{
+
+.profileBackground{
+  position: absolute;
+  width: 110%;
+  height: 130%;
+  background-image: url(./img/Logos.webp);
+  background-position: center;
+  background-size: cover;
+  animation: float 10s ease infinite;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
+.photoProfile{
   width: 180px;
+  height: 180px;
+  background-color: var(--main-dark-color);
+  background-image: url("./img/Rich\ CV.webp");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border: 5px solid var(--highlight-color);
+  z-index: 1;
+}
+.light > .photoProfile{
+  border: 5px solid var(--highlight-dark-color);
 }
 
 .aboutText{
