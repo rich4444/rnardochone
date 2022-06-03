@@ -29,11 +29,10 @@ const scrollIcon = document.getElementsByClassName("scroll-icon")[0];
 const backButton = document.getElementById("back-button");
 const header = document.querySelector("header");
 
-backButton.addEventListener("click", () =>{
+backButton.addEventListener("click", () => {
   header.scrollIntoView();
   closeNavBar();
 });
-
 
 function hideScrollIcon() {
   if (window.scrollY > 200) {
@@ -51,13 +50,15 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("#navbar li");
 
 //Navbar links
-navLinks.forEach(link => link.addEventListener("click", () =>{
-  closeNavBar();
-  goToSection(link.getAttribute("id"));
-}))
+navLinks.forEach((link) =>
+  link.addEventListener("click", () => {
+    closeNavBar();
+    goToSection(link.getAttribute("id"));
+  })
+);
 
-function goToSection (id){
-  target = [...sections].find(x => x.getAttribute("id")+"Nav" == id);
+function goToSection(id) {
+  target = [...sections].find((x) => x.getAttribute("id") + "Nav" == id);
   target.scrollIntoView();
 }
 
@@ -97,48 +98,44 @@ const engIcon = document.getElementById("engIcon");
 const espIcon = document.getElementById("espIcon");
 const engText = document.querySelectorAll(".eng");
 const espText = document.querySelectorAll(".esp");
-langButton.addEventListener("click", e => {
-    changeLanguage()
-})
-
+langButton.addEventListener("click", (e) => {
+  changeLanguage();
+});
 
 var userLang = navigator.language || navigator.userLanguage;
 
-if(/^es\b/.test(navigator.language)){
+if (/^es\b/.test(navigator.language)) {
   languageSpanish();
 }
 
-function languageSpanish (){
-    engIcon.classList.remove("anim");
-    espIcon.classList.add("anim");
-    engText.forEach((e) => {
-        e.classList.add("hideText");
-    })
-    espText.forEach((e) => {
-        e.classList.remove("hideText");
-    })
+function languageSpanish() {
+  engIcon.classList.remove("anim");
+  espIcon.classList.add("anim");
+  engText.forEach((e) => {
+    e.classList.add("hideText");
+  });
+  espText.forEach((e) => {
+    e.classList.remove("hideText");
+  });
 }
-function languageEnglish (){
-    engIcon.classList.add("anim");
-    espIcon.classList.remove("anim");
-    engText.forEach((e) => {
-        e.classList.remove("hideText");
-    })
-    espText.forEach((e) => {
-        e.classList.add("hideText");
-    })
+function languageEnglish() {
+  engIcon.classList.add("anim");
+  espIcon.classList.remove("anim");
+  engText.forEach((e) => {
+    e.classList.remove("hideText");
+  });
+  espText.forEach((e) => {
+    e.classList.add("hideText");
+  });
 }
 
 function changeLanguage() {
-    if(espIcon.classList.contains("anim")){
-        languageEnglish();
-    } else {
-        languageSpanish();
-    }
+  if (espIcon.classList.contains("anim")) {
+    languageEnglish();
+  } else {
+    languageSpanish();
   }
-
-
-
+}
 
 //Sandwich navbar
 const openButton = document.getElementById("showNav");
@@ -146,8 +143,8 @@ const closeButton = document.getElementById("hideNav");
 const openCloseButtons = document.getElementsByClassName("navBarButtons")[0];
 const ulList = document.getElementById("navbar");
 
-window.addEventListener('resize', () => {
-  if(openCloseButtons.offsetParent === null){
+window.addEventListener("resize", () => {
+  if (openCloseButtons.offsetParent === null) {
     closeNavBar();
   }
 });
@@ -170,7 +167,10 @@ function closeNavBar() {
 
 // Fix url bar
 if (!serverSide) {
-  visualViewport.addEventListener('resize', () => {
-    document.documentElement.style.setProperty('--viewport-height', `${visualViewport.height}px`);
+  visualViewport.addEventListener("resize", () => {
+    document.documentElement.style.setProperty(
+      "--viewport-height",
+      `${visualViewport.height}px`
+    );
   });
 }
