@@ -19,7 +19,7 @@ html {
   min-height: -webkit-fill-available;
   height: fill-available;
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 0;
 }
 :root {
   --main-dark-color: #121b51;
