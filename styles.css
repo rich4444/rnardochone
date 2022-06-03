@@ -1,3 +1,16 @@
+:root {
+  --main-dark-color: #121b51;
+  --secondary-dark-color: #243a7e;
+
+  --main-light-color: #f6f6f6;
+  --secondary-light-color: #ccd7da;
+
+  --highlight-color: #3cdfe7;
+  --highlight-dark-color: #166064;
+  
+  --viewport-height: 100%;
+}
+
 *,
 *::after,
 *::before:not(i) {
@@ -15,21 +28,11 @@ html * {
   list-style: none;
 }
 html {
-  height: 100%;
+  height: calc(var(--viewport-height) - 55px);
   min-height: -webkit-fill-available;
   height: fill-available;
   scroll-behavior: smooth;
   scroll-padding-top: 0;
-}
-:root {
-  --main-dark-color: #121b51;
-  --secondary-dark-color: #243a7e;
-
-  --main-light-color: #f6f6f6;
-  --secondary-light-color: #ccd7da;
-
-  --highlight-color: #3cdfe7;
-  --highlight-dark-color: #166064;
 }
 
 /*#region color manager*/

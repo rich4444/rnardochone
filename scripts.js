@@ -167,3 +167,10 @@ function closeNavBar() {
   ulList.classList.remove("openNav");
   openButton.style.display = "block";
 }
+
+// Fix url bar
+if (!serverSide) {
+  visualViewport.addEventListener('resize', () => {
+    document.documentElement.style.setProperty('--viewport-height', `${visualViewport.height}px`);
+  });
+}
