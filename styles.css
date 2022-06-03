@@ -136,7 +136,6 @@ section {
   height: 100%;
   padding: 50px 0 150px 0;
   position: relative;
-  min-height: 50vh;
 }
 
 /* Section Titles */
@@ -797,7 +796,109 @@ video {
 }
 /*#endregion ABOUT*/
 
+/*#region CONTACT*/
 
+.contactContainer{  
+  width: min(900px, 90%);
+  margin: auto;
+  display: flex;
+  gap: 30px;
+}
+
+.contactData{
+  display: flex;
+  flex-direction: column;
+}
+
+.contactText{
+  width: 90%;
+  font-size: 1.3rem;
+}
+.cheer{
+  font-weight: 600;
+}
+.cheer:hover{
+  font-size: 2rem;
+  animation: hithere 1s ease infinite;
+}
+@keyframes hithere {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.95, 1.05); }
+  50% { transform: scale(1.05, 0.95); }
+  75% { transform: scale(0.98, 1.02); }
+}
+
+.contactIcons ul{
+  margin: 50px 0;
+  display: flex;
+  font-size: 2rem;
+  gap: 50px;
+  cursor: pointer;
+}
+.contactIcons ul li{
+  transform: scale(1) translateY(0);
+  transition: all .3s;
+}
+
+.contactIcons ul li:hover{
+  transform: scale(1.2) translateY(-2px);
+}
+.contactIcons ul li:active{
+  transform: scale(1.2) translateY(2px);
+  filter: brightness(.5);
+}
+
+.contactInfo ul li *{
+  display: inline;
+  font-size: 1.1rem;
+  margin-right: 10px;
+  line-height: 1.8;
+}
+
+.contactForm form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contactForm form input{
+  font-size: 1.2rem;
+  border-style: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.contactForm form input[type='submit']{
+  justify-content: center;
+  font-weight: 900;
+}
+
+.contactForm form textarea{
+  font-size: 1.2rem;
+  border-style: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/*#endregion CONTACT*/
+
+/* FOOTER */
+footer{
+  padding: 10px 20px;
+}
+footer p{
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+footer p:hover{
+  font-size: 1.05rem;
+  text-decoration: underline;
+}
 
 
 /* MEDIA QUARY */
@@ -905,6 +1006,10 @@ video {
     margin-top: 30px;
   }
 
+  
+  .contactContainer{  
+    flex-direction: column;
+  }
     
 }
 
@@ -935,5 +1040,9 @@ video {
 @media (hover: none) {
   .coverImage {
     opacity: 0;
+  }
+  .cheer{
+    font-size: 2rem;
+    animation: hithere 1s ease infinite;
   }
 }
