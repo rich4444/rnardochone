@@ -31,6 +31,7 @@ const header = document.querySelector("header");
 
 backButton.addEventListener("click", () =>{
   header.scrollIntoView();
+  closeNavBar();
 });
 
 

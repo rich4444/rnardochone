@@ -218,7 +218,6 @@ header {
   position: relative;
   height: 100vh;
   padding: 50px 0;
-  /* min-height: -webkit-fill-available; */
   height: fill-available;
   display: flex;
   flex-direction: column;
@@ -353,6 +352,7 @@ header {
   opacity: 1;
   transition: all 1s;
   animation: bounce 2s ease infinite;
+  z-index: 1;
 }
 
 .scroll-icon:hover .scroll-text p{
@@ -511,6 +511,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  z-index: 1;
 }
 
 .projectPreviewImage {
@@ -632,6 +633,7 @@ video {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  z-index: 1;
 }
 
 .logoSkill{
@@ -687,6 +689,9 @@ video {
 .mainContainer{
   width: min(800px, 90%);
   margin: auto;
+}
+.mainContainer *{
+  z-index: 1;
 }
 
 .profilePicture, .aboutText, .bottomContainer{
@@ -776,6 +781,8 @@ video {
   line-height: 2;
   font-weight: 600;
   border-radius: 5px 5px 50px 50px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .courses ul li:hover{
@@ -805,6 +812,10 @@ video {
   gap: 30px;
 }
 
+.contactContainer *{
+  z-index: 1;
+}
+
 .contactData{
   display: flex;
   flex-direction: column;
@@ -819,13 +830,14 @@ video {
 }
 .cheer:hover{
   font-size: 2rem;
+  transform-origin: 0;
   animation: hithere 1s ease infinite;
 }
 @keyframes hithere {
-  from, to { transform: scale(1, 1); }
-  25% { transform: scale(0.95, 1.05); }
-  50% { transform: scale(1.05, 0.95); }
-  75% { transform: scale(0.98, 1.02); }
+  from, to { transform: scale(1, 1) }
+  25% { transform: scale(0.95, 1.05) }
+  50% { transform: scale(1.05, 0.95) }
+  75% { transform: scale(0.98, 1.02) }
 }
 
 .contactIcons ul{
@@ -999,7 +1011,8 @@ footer p:hover{
     
     
   .bottomContainer{
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr;    
+    padding: 15px 20px 20px 20px;
   }
   
   .langAndResume{
@@ -1013,6 +1026,15 @@ footer p:hover{
     
 }
 
+@media screen and (min-width: 1700px) {
+  .waves {
+    aspect-ratio: 20;
+  }
+  
+  section {
+    padding: 50px 0 200px 0;
+  }
+}
 
 
 @media screen and (max-width: 450px) {
@@ -1037,6 +1059,19 @@ footer p:hover{
     }      
 }
 
+@media screen and (max-width: 250px) {
+  .button > p{
+    display: none;
+  }
+  h1, h2{
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  .contactIcons ul{
+    flex-direction: column;
+  }
+}
 @media (hover: none) {
   .coverImage {
     opacity: 0;
