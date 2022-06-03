@@ -35,10 +35,10 @@
         <div class="header--buttons">
             <div class="top-button darktheme--button">
                 <div id="moon" class="dkButton">
-                    <i class="fa fa-moon-o" aria-hidden="true"></i>
+                    <i class="fas fa-sun    "></i>
                 </div>
                 <div id="sun" class="dkButton anim">
-                    <i class="fas fa-sun    "></i>
+                    <i class="fa fa-moon-o" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="top-button language--button">
@@ -63,7 +63,10 @@
         </div>
 
         <div class="scroll-icon">
-            <div class="scroll-text"><p class="eng hideText">SCROLL DOWN</p><p class="esp">DESPLÁZATE HACIA ABAJO</p></div>
+            <div class="scroll-text">
+                <p class="eng hideText">SCROLL DOWN</p>
+                <p class="esp">DESPLÁZATE HACIA ABAJO</p>
+            </div>
             <i class="fa fa-angle-double-down" aria-hidden="true"></i>
         </div>    
 
@@ -96,20 +99,20 @@
         </div>
         <ul id="navbar">
             <li id="projectsNav">
-                <p class="esp">PROYECTOS</p>
-                <p class="eng hideText">PROJECTS</p>
+                <div class="esp">PROYECTOS</div>
+                <div class="eng hideText">PROJECTS</div>
             </li>
             <li id="skillsNav">
-                <p class="esp">HABILIDADES</p>
-                <p class="eng hideText">SKILLS</p>
+                <div class="esp">HABILIDADES</div>
+                <div class="eng hideText">SKILLS</div>
             </li>
             <li id="aboutNav">
-                <p class="esp">SOBRE MI</p>
-                <p class="eng hideText">ABOUT ME</p>
+                <div class="esp">SOBRE MI</div>
+                <div class="eng hideText">ABOUT ME</div>
             </li>
             <li id="contactNav">
-                <p class="esp">CONTACTO</p>
-                <p class="eng hideText">CONTACT</p>
+                <div class="esp">CONTACTO</div>
+                <div class="eng hideText">CONTACT</div>
             </li>
         </ul>
     </nav>
@@ -118,7 +121,8 @@
     <section class="secondary-color" id="projects">
         <article>
             <h1 class="sectionTitle highlight"><span>
-                <p class="esp">PROYECTOS</p><p class="eng hideText">PROJECTS</p>
+                <div class="esp">PROYECTOS</div>
+                <div class="eng hideText">PROJECTS</div>
             </span></h1>       
 
             <div class="projectsContainer">     
@@ -304,8 +308,8 @@
 
         <article>
             <h1 class="sectionTitle highlight"><span>
-                <p class="esp">PRACTICAS</p>
-                <p class="eng hideText">PRACTICES</p>
+                <div class="esp">PRACTICAS</div>
+                <div class="eng hideText">PRACTICES</div>
             </span></h1>
             <p class="sectionDescription esp">Pequeños proyectos que he ido haciendo en mi proceso de aprendizaje.</p>
             <p class="sectionDescription eng hideText">Small projects I have made as I was learning.</p>
@@ -391,8 +395,8 @@
 
         <article>
             <h1 class="sectionTitle highlight"><span>
-                <p class="esp">DESARROLLO DE VIDEOJUEGOS</p>
-                <p class="eng hideText">GAME DEVELOPMENT</p>
+                <div class="esp">DESARROLLO DE VIDEOJUEGOS</div>
+                <div class="eng hideText">GAME DEVELOPMENT</div>
             </span></h1>
             <p class="sectionDescription esp">Algunos de los videojuegos que he hecho, para PC, Web, y Android. <br/> Si bien no son juegos comerciales, me siento satisfecho que con cada uno he ido aprendiendo cosas nuevas. <br /><br />Todos fueron programados y diseñados por mi.</p>
             <p class="sectionDescription eng hideText">Some of the videogames that I have made, for PC, Web, and Android. <br/> While these are not even close to commercial games, I still feel satisfied that with each of them I have learn something new.<br /><br />All of them were code and designed by myself.</p>
@@ -490,7 +494,7 @@
                     </div>    
                 </div>
 
-                <div class="projectItem" id="lastItem">
+                <div class="projectItem" class="lastItem">
                     <h2>Assault on the RF</h2>
                     <div class="projectPreviewImage">
                             <video autoplay loop muted playsinline class="gameImage"  src="./img/games/game4.webm" alt="game preview video"></video>
@@ -544,10 +548,77 @@
     <section class="main-color" id="skills">
         <article>
             <h1 class="sectionTitle highlight"><span>
-                <p class="esp">HABILIDADES</p>
-                <p class="eng hideText">SKILLS</p>
+                <div class="esp">HABILIDADES</div>
+                <div class="eng hideText">SKILLS</div>
             </span></h1>    
         </article>
+
+
+        <div class="skillsGrid">
+            <div class="div-1 logoSkill">
+                <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="div0 titleSkill secondary-color">FULLSTACK</div>
+
+            <div class="div1 logoSkill">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="div2 logoSkill">
+                <i class="fas fa-database"></i>
+            </div>
+            <div class="div3 titleSkill secondary-color">FRONTEND</div>
+            <div class="div4 titleSkill secondary-color">BACKEND</div>
+            <div class="div5 skillsSkill secondary-color">
+                <ul>
+                    <li><i class="fa-brands fa-html5"></i>HTML</li>
+                    <li><i class="fa-brands fa-css3-alt"></i>CSS</li>
+                    <li><i class="fa-brands fa-js-square"></i>JAVASCRIPT</li>
+                </ul>
+            </div>
+            <div class="div6 skillsSkill secondary-color">
+                <ul>
+                    <li><i class="fa-brands fa-react"></i>REACT</li>
+                    <li><i class="fa-brands fa-bootstrap"></i>BOOTSTRAP</li>
+                    <li><i class="fa-brands fa-sass"></i>SASS</li>
+                </ul>
+            </div>
+            <div class="div7 skillsSkill secondary-color">                
+                <p><i class="fa-solid fa-person-digging"></i><br/>WORK IN PROGRESS</p>
+            </div>
+            <div class="div9 logoSkill">
+                <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <div class="div10 logoSkill">
+                <i class="fa-solid fa-paintbrush"></i>
+            </div>
+            <div class="div11 skillsSkill secondary-color">
+                <ul>
+                    <li><i class="fa-solid fa-code"></i>VS CODE</li>
+                    <li><i class="fa-brands fa-git-alt"></i>GIT</li>
+                    <li><i class="fa-brands fa-github"></i>GITHUB</li>
+                    <li><i class="fa-brands fa-figma"></i>FIGMA</li>
+                    <li><i><b>Ts</b></i>TYPESCRIPT</li>
+                    <li><i class="fa-brands fa-chrome"></i>DEV TOOLS</li>
+                </ul>
+            </div>
+            <div class="div12 titleSkill secondary-color">GAME DEV.</div>
+            <div class="div13 titleSkill secondary-color">GRAPHIC D.</div>
+            <div class="div14 skillsSkill secondary-color">
+                <ul>
+                    <li><i class="fa-brands fa-unity"></i>UNITY</li>
+                    <li><i class="fa-solid fa-hashtag"></i>C-SHARP</li>
+                    <li><i class="fa-solid fa-cube"></i>BLENDER</li>
+                </ul>
+            </div>
+            <div class="div15 skillsSkill secondary-color">
+                <ul>
+                    <li><i class="fa-solid fa-bezier-curve"></i>CORELDRAW</li>
+                    <li><i class="fa-solid fa-pen-nib"></i>AFFINITY D.</li>
+                    <li><i class="fa-solid fa-palette"></i>PHOTOSHOP</li>
+                </ul>
+            </div>
+        </div>
+
 
         <div class="waves-secondary-color">
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -570,10 +641,106 @@
     <section class="secondary-color" id="about">
         <article>
             <h1 class="sectionTitle highlight"><span>
-                <p class="esp">SOBRE MI</p>
-                <p class="eng hideText">ABOUT MYSELF</p>
+                <div class="esp">SOBRE MI</div>
+                <div class="eng hideText">ABOUT MYSELF</div>
             </span></h1> 
         </article> 
+
+        <div class="mainContainer">
+            <div class="topContainer">
+                <div class="profilePicture main-color">
+                    <img src="./img/avatar.png" alt="foto de Ricardo Nardochone">
+                </div>
+
+                <div class="aboutText main-color">
+                    <h1 class="highlight">Ricardo Nardochone</h1>
+                    <div class="changing--text">
+                        <ul>
+                            <li><p>FULLSTACK</p></li>
+                            <li><p class="esp">PROGRAMADOR</p><p class="eng hideText">PROGRAMMER</p></li>
+                            <li><p class="esp">DISEÑADOR</p><p class="eng hideText">DESIGNER</p></li>
+                            <li><p>FRONTEND</p></li>
+                            <li><p>GAME DEV.</p></li>
+                        </ul>
+                    </div>
+                    <p class="esp">Innovador, orientado a las tareas, y meticuloso desarrollador web. Estoy ansioso por conseguir mi primer empleo en la industria. Aprendo rápidamente, trabajo bien en equipo, y estoy acostumbrado al modelo mobile-first, y al responsive design.</p>
+                    <p class="eng hideText">Innovative, task-oriented, and meticulous web developer. I am looking forward to my first job in the industry. I learn quickly, work well in a team, and I am used to the mobile-first, and responsive-design models.</p>
+                </div>
+            </div>
+
+            <div class="bottomContainer main-color">
+                <div class="courses">
+                    <h2>
+                        <div class="esp">CURSOS</div>
+                        <div class="eng hideText">COURSES</div>
+                    </h2>
+                    <ul>
+                        <li>
+                            <a href="https://www.freecodecamp.org/certification/Lazy4444/javascript-algorithms-and-data-structures" target="_blank">
+                            <i class="fa-brands fa-free-code-camp"></i> Responsive Web Design</a>
+                        </li>
+                        <li>
+                            <a href="https://www.freecodecamp.org/certification/Lazy4444/javascript-algorithms-and-data-structures" target="_blank">
+                            <i class="fa-brands fa-free-code-camp"></i> Js Algorithms & Data Structures</a>
+                        </li>
+                        <li>
+                            <a href="https://www.freecodecamp.org/learn/front-end-development-libraries/" target="_blank">
+                            <i class="fa-brands fa-free-code-camp"></i> Frontend Libraries & Frameworks</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/learning/paths/conviertete-en-desarrollador-web-full-stack" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i> Fullstack Developer</a>
+                        </li>
+                        <li>
+                            <a href="https://conectaempleo-formacion.fundaciontelefonica.com/mis-cursos?p_p_id=mydiplomas_WAR_diplomaportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage&p_p_col_id=column-1&p_p_col_pos=1&p_p_col_count=3&_mydiplomas_WAR_diplomaportlet_userComponentDiplomaId=419896&_mydiplomas_WAR_diplomaportlet_action=downloadDiploma">
+                                <i class="fa-solid fa-file-arrow-down"></i> Diseño Web con HTML5 + CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="langAndResume">
+                    <div class="esp">    
+                        <div class="languages">                        
+                            <h2>IDIOMAS</h2>
+                            <ul>
+                                <li>Español Nativo</li>
+                                <li>Inglés C1/C2(Fluido)</li>
+                                <li>Japonés JLPT N5(Básico)</li>
+                            </ul>
+                        </div>
+                                                    
+                        <a href="./img/Rich CV" download>
+                            <div class="button secondary-color cvButton">
+                                <i class="fa-solid fa-file"></i>
+                                <p>CURRICULUM</p>
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="eng hideText">    
+                        <div class="languages">
+                            <h2>LANGUAGES</h2>
+                            <ul>
+                                <li>Native Spanish</li>
+                                <li>C1/C2 English(Fluid)</li>
+                                <li>JLPT N5 Japanese(Basic)</li>
+                            </ul>
+                        </div>
+                                                    
+                        <a href="./img/Rich CV" download>
+                            <div class="button secondary-color cvButton">
+                                <i class="fa-solid fa-file"></i>
+                                <p>RESUME</p>
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <div class="waves-main-color">
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -596,8 +763,8 @@
     <section class="main-color" id="contact">
         <article>
             <h1 class="sectionTitle highlight"><span>
-                <p class="esp">CONTACTO</p>
-                <p class="eng hideText">CONTACT</p>
+                <div class="esp">CONTACTO</div>
+                <div class="eng hideText">CONTACT</div>
             </span></h1>
         </article>  
 

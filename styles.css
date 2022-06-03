@@ -123,14 +123,20 @@ h1 {
   color: var(--highlight-color);
 }
 
+a{
+  color: inherit;
+}
+
 article {
   padding: 50px 0;
 }
 
 section {
-  padding: 50px 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0 150px 0;
   position: relative;
-  min-height: 200vh;
+  min-height: 50vh;
 }
 
 /* Section Titles */
@@ -478,11 +484,11 @@ nav ul li.highlight::after, nav ul li:hover::after{
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
+  font-size: 1.1rem;
 }
 
 h2 {
   font-size: 1.5rem;
-  margin-bottom: -5px;
 }
 
 .projectInfo ul {
@@ -533,6 +539,7 @@ video {
 }
 
 .sectionDescription {
+  font-size: 1.2rem;
   text-align: center;
   margin: auto;
   width: min(700px, 90%);
@@ -594,14 +601,165 @@ video {
 .hideOnBig {
   display: none;
 }
-
-#lastItem {
-  margin-bottom: 80px;
-}
 /*#endregion GAMEDEVELOPMENT*/
 
 /*#endregion other projects*/
 
+/*#region SKILLS */
+
+.skillsGrid {
+  display: grid;
+  width: min(800px, 90%);
+  margin: auto;
+  grid-template-areas:
+  "logo0 logo0 logo0"
+  "title0 title0 title0"
+  "logo1 logo1 logo2"
+  "title1 title1 title2"
+  "skills1 skills2 skills3"
+  "skills1 skills2 skills3"
+  "skills4 logo3 logo4"
+  "skills4 title3 title4"
+  "skills4 skills5 skills6"
+  "skills4 skills5 skills6";
+  gap: 10px;
+  }
+
+.skillsGrid div{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.logoSkill{
+  font-size: 2rem;
+}
+
+.skillsGrid > .titleSkill{
+  font-size: 1.5rem;
+  font-weight: 900;
+  border-radius: 50px 50px 0 0;
+}
+
+.skillsGrid > .skillsSkill{
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.skillsGrid > .skillsSkill i{
+  color: var(--highlight-color);
+  font-size: 1.5rem;
+  margin-right: 20px;
+}
+
+.skillsSkill.light i{
+  color: var(--highlight-dark-color);
+}
+
+.div-1{ grid-area: logo0; }
+.div0{ grid-area: title0; }
+.div1{ grid-area: logo1; }
+.div2{ grid-area: logo2; }
+.div3{ grid-area: title1; }
+.div4{ grid-area: title2; }
+.div5{ grid-area: skills1; }
+.div6{ grid-area: skills2; }
+.div7{ 
+  grid-area: skills3;
+  text-align: center;
+}
+.div9{ grid-area: logo3; }
+.div10{ grid-area: logo4; }
+.div11{ grid-area: skills4; }
+.div12{ grid-area: title3; }
+.div13{ grid-area: title4; }
+.div14{ grid-area: skills5; }
+.div15{ grid-area: skills6; }
+
+/*#endregion SKILLS */
+
+
+/*#region ABOUT */
+
+.mainContainer{
+  width: min(800px, 90%);
+  margin: auto;
+}
+
+.profilePicture, .aboutText, .bottomContainer{
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 5px 5px 20px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.topContainer{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.profilePicture{
+  width:  min(300px, 100%);
+  border-top-left-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profilePicture > img{
+  width: 180px;
+}
+
+.aboutText{
+  width: 100%;
+  border-top-right-radius: 50px;
+}
+
+.aboutText > .changing--text{
+  width: 100%;
+}
+
+.aboutText > p{
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.bottomContainer{
+  padding: 25px 40px 40px 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.1rem;
+  line-height: 2;
+  font-weight: 600;
+  border-radius: 5px 5px 50px 50px;
+}
+
+.courses ul li:hover{
+  color: var(--highlight-color);
+}
+.light > .courses ul li:hover {
+  color: var(--highlight-dark-color);
+}
+
+.langAndResume{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cvButton{
+  margin-top: 30px;
+}
+/*#endregion ABOUT*/
+
+
+
+
+/* MEDIA QUARY */
 @media screen and (max-width: 800px) {
   body {
     font-size: 20px;
@@ -664,6 +822,73 @@ video {
   #hideNav{
     display: none;
   }
+
+  .skillsGrid {
+    grid-template-areas:
+    "logo0 logo0"
+    "title0 title0"
+    "logo1 logo1"
+    "title1 title1"
+    "skills1 skills2"
+    "skills1 skills2"
+    "skills4 logo2"
+    "skills4 title2"
+    "skills4 skills3"
+    "skills4 skills3"
+    "logo3 logo4"
+    "title3 title4"
+    "skills5 skills6"
+    "skills5 skills6";
+    }     
+
+    
+    .topContainer{
+      flex-direction: column;
+    }
+    
+    .profilePicture{
+      width:  100%;
+      border-radius: 50px 50px 5px 5px;
+    }
+    
+    .aboutText{
+      border-radius: 5px;
+    }
+    
+    
+  .bottomContainer{
+    grid-template-columns: 1fr;
+  }
+  
+  .langAndResume{
+    margin-top: 30px;
+  }
+
+    
+}
+
+
+
+@media screen and (max-width: 450px) {
+  .skillsGrid {
+    grid-template-areas:
+    "logo0"
+    "title0"
+    "logo1"
+    "title1"
+    "skills1"
+    "skills2"
+    "skills4"
+    "logo2"
+    "title2"
+    "skills3"
+    "logo3"
+    "title3 "
+    "skills5"
+    "logo4"
+    "title4"
+    "skills6";
+    }      
 }
 
 @media (hover: none) {
