@@ -97,7 +97,6 @@ const engIcon = document.getElementById("engIcon");
 const espIcon = document.getElementById("espIcon");
 const engText = document.querySelectorAll(".eng");
 const espText = document.querySelectorAll(".esp");
-
 langButton.addEventListener("click", e => {
     changeLanguage()
 })
@@ -105,13 +104,13 @@ langButton.addEventListener("click", e => {
 
 var userLang = navigator.language || navigator.userLanguage;
 
-if(/^en\b/.test(navigator.language)){
-    languageEnglish();
+if(/^es\b/.test(navigator.language)){
+  languageSpanish();
 }
 
 function languageSpanish (){
-    engIcon.classList.add("anim");
-    espIcon.classList.remove("anim");
+    engIcon.classList.remove("anim");
+    espIcon.classList.add("anim");
     engText.forEach((e) => {
         e.classList.add("hideText");
     })
@@ -120,8 +119,8 @@ function languageSpanish (){
     })
 }
 function languageEnglish (){
-    engIcon.classList.remove("anim");
-    espIcon.classList.add("anim");
+    engIcon.classList.add("anim");
+    espIcon.classList.remove("anim");
     engText.forEach((e) => {
         e.classList.remove("hideText");
     })
@@ -131,7 +130,7 @@ function languageEnglish (){
 }
 
 function changeLanguage() {
-    if(engIcon.classList.contains("anim")){
+    if(espIcon.classList.contains("anim")){
         languageEnglish();
     } else {
         languageSpanish();
