@@ -217,11 +217,10 @@ a {
 
 /*#region header*/
 header {
-  /* calc(var(--viewport-height) - 55px) */
+  height: 100vh; /* Fallback */
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
-  height: calc(var(--viewport-height) - 100vh);
   padding: 50px 0;
-  height: fill-available;
   display: flex;
   flex-direction: column;
   justify-content: center;
