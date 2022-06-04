@@ -28,7 +28,6 @@ html * {
   list-style: none;
 }
 html {
-  height: calc(var(--viewport-height) - 55px);
   min-height: -webkit-fill-available;
   height: fill-available;
   scroll-behavior: smooth;
@@ -218,8 +217,9 @@ a {
 
 /*#region header*/
 header {
+  /* calc(var(--viewport-height) - 55px) */
   position: relative;
-  height: 100vh;
+  height: calc(var(--viewport-height) - 55px);
   padding: 50px 0;
   height: fill-available;
   display: flex;
