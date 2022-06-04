@@ -28,13 +28,8 @@ html * {
   list-style: none;
 }
 html {
-  min-height: -webkit-fill-available;
-  height: -webkit-fill-available;
   scroll-behavior: smooth;
   scroll-padding-top: 0;
-}
-body{  
-  min-height: -webkit-fill-available;
 }
 
 /*#region color manager*/
@@ -220,9 +215,8 @@ a {
 
 /*#region header*/
 header {
-  min-height: -webkit-fill-available;
   height: 100vh; 
-  /* height: calc(var(--vh, 1vh) * 100); */
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
   padding: 50px 0;
   display: flex;
