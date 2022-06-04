@@ -166,9 +166,9 @@ function closeNavBar() {
 }
 
 // Fix url bar
-  visualViewport.addEventListener("resize", () => {
-    document.documentElement.style.setProperty(
-      "--viewport-height",
-      `${visualViewport.height}px`
-    );
-  });
+visualViewport.addEventListener("resize", () => {
+  document.documentElement.style.setProperty(
+    "--viewport-height",
+    `${visualViewport.height}px`
+  );
+});

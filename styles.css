@@ -219,7 +219,7 @@ a {
 header {
   /* calc(var(--viewport-height) - 55px) */
   position: relative;
-  height: calc(var(--viewport-height) - 55px);
+  height: calc(var(--viewport-height) - 100vh);
   padding: 50px 0;
   height: fill-available;
   display: flex;
