@@ -166,11 +166,9 @@ function closeNavBar() {
 }
 
 // Fix url bar
-if (!serverSide) {
   visualViewport.addEventListener("resize", () => {
     document.documentElement.style.setProperty(
       "--viewport-height",
       `${visualViewport.height}px`
     );
   });
-}
