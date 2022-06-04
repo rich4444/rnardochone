@@ -177,3 +177,28 @@ window.addEventListener('resize', () => {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+//Googlie eyes
+const eye = document.getElementsByClassName("eye");
+const pupil = document.querySelectorAll(".pupil");
+
+document.addEventListener("mousemove", (e) => {
+    for(let i = 0; i < pupil.length; i++){
+      let distX = e.clientX-getOffset(eye[i]).left;
+      let distY = e.clientY-getOffset(eye[i]).top;
+      pupil[i].style.transform = `translate(${positionMouse(distX)}%, ${positionMouse(distY)}%)`;
+    }
+})
+
+function positionMouse (dist){
+  let newValue = (((dist + 100) * 100) / 200) -100;
+  return Math.min(Math.max(newValue, -100), 0)
+}
+
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX + el.clientWidth/2,
+      top: rect.top + window.scrollY + el.clientHeight/2
+    };
+  }
