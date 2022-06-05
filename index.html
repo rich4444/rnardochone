@@ -18,16 +18,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 
-    <script src="https://kit.fontawesome.com/e26da2372a.js" crossorigin="anonymous"></script>
-
-    <title>Portfolio</title>
-    <link rel="icon" type="image/x-icon" href="./img/favico.ico">
-
-    <script src="scripts.js" defer></script>
+    <script defer src="https://kit.fontawesome.com/e26da2372a.js" crossorigin="anonymous"></script>
 
     <link href="https://cdn.skypack.dev/sanitize.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
 
+    <title>Portfolio</title>    
+    <link rel="icon" type="image/x-icon" href="./img/favico.ico">
+
+    <script src="scripts.js" defer></script>
 </head>
 
 <body>
@@ -83,13 +82,13 @@
             </div>
             <div class="contactIcons">
                 <ul>
-                    <li><a href="https://www.linkedin.com/in/ricardo-nardochone/" target="_blank"><i
+                    <li><a href="https://www.linkedin.com/in/ricardo-nardochone/" aria-label="Link to Linkedin profile" target="_blank"><i
                                 class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/rich4444" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <li><a href="https://github.com/rich4444" aria-label="Link to Github profile" target="_blank"><i class="fa-brands fa-github"></i></a>
                     </li>
-                    <li><a href="https://codepen.io/rn4444" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+                    <li><a href="https://codepen.io/rn4444" aria-label="Link to Codepen profile" target="_blank"><i class="fa-brands fa-codepen"></i></a>
                     </li>
-                    <li><a href="https://wa.me/59893966795?text=Hola Ricardo!" target="_blank"><i
+                    <li><a href="https://wa.me/59893966795?text=Hola Ricardo!" aria-label="Open Whatsapp chat" target="_blank"><i
                                 class="fa-brands fa-whatsapp"></i></a></li>
                 </ul>
             </div>
@@ -336,11 +335,11 @@
                                         &nbsp Designed using REACT</p>
                                 </li>
                                 <li>
-                                    <p class="esp hideText" style="color: rgb(255, 102, 0); font-weight:900">
+                                    <p class="esp hideText highlight" style="font-weight:900">
                                         <i class="fa-solid fa-x"></i>
                                         &nbsp ¡Trabajo en proceso!
                                     </p>
-                                    <p class="eng" style="color: rgb(255, 102, 0); font-weight:900">
+                                    <p class="eng highlight" style="font-weight:900">
                                         <i class="fa-solid fa-x"></i>
                                         &nbsp Work In Progress!
                                     </p>
@@ -895,13 +894,13 @@
                 </div>
                 <div class="contactIcons  highlight">
                     <ul>
-                        <li><a href="https://www.linkedin.com/in/ricardo-nardochone/" target="_blank"><i
+                        <li><a href="https://www.linkedin.com/in/ricardo-nardochone/" aria-label="Link to Linkedin profile" target="_blank"><i
                                     class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="https://github.com/rich4444" target="_blank"><i
+                        <li><a href="https://github.com/rich4444" aria-label="Link to Github profile" target="_blank"><i
                                     class="fa-brands fa-github"></i></a></li>
-                        <li><a href="https://codepen.io/rn4444" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+                        <li><a href="https://codepen.io/rn4444" aria-label="Link to Codepen profile" target="_blank"><i class="fa-brands fa-codepen"></i></a>
                         </li>
-                        <li><a href="https://wa.me/59893966795?text=Hola Ricardo!" target="_blank"><i
+                        <li><a href="https://wa.me/59893966795?text=Hola Ricardo!" aria-label="Open Whatsapp chat" target="_blank"><i
                                     class="fa-brands fa-whatsapp"></i></a></li>
                     </ul>
                 </div>
@@ -924,15 +923,15 @@
             </div>
 
             <div class="contactForm esp hideText">
-                <form name="contactForm" id="contactForm" action="https://formsubmit.co/rich4shioo@gmail.com"
-                    method="POST" target="_blank">
+                <form name="contactForm" id="contactFormEsp" action="https://formsubmit.co/rich4shioo@gmail.com"
+                    method="POST">
                     <input type="hidden" name="_template" value="box" />
-                    <input type="hidden" name="_next" value="https://nricardo.tech">
-                    <input type="hidden" name="_subject" value="Nuevo mensaje de la web!" />
-                    <input type="text" name="name" id="name" placeholder="Nombre" required />
-                    <input type="email" name="email" id="email" placeholder="Email" required />
-                    <input type="tel" name="number" id="number" placeholder="Teléfono" />
-                    <textarea name="textarea" id="textarea" cols="30" rows="11" placeholder="Mensaje"
+                    <input type="hidden" name="_next" value="https://nricardo.live/">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje del PORTFOLIO" />
+                    <input type="text" name="name" id="nameEsp" placeholder="Nombre" required />
+                    <input type="email" name="email" id="emailEsp" placeholder="Email" required />
+                    <input type="tel" name="number" id="numberEsp" placeholder="Teléfono" />
+                    <textarea name="textarea" id="textareaEsp" cols="30" rows="11" placeholder="Mensaje"
                         form="contactForm"></textarea>
                     <input class="button secondary-color" type="submit" value="ENVIAR" />
                 </form>
@@ -940,10 +939,10 @@
 
             <div class="contactForm eng">
                 <form name="contactForm" id="contactForm" action="https://formsubmit.co/rich4shioo@gmail.com"
-                    method="POST" target="_blank">
+                    method="POST">
                     <input type="hidden" name="_template" value="box" />
-                    <input type="hidden" name="_next" value="https://nricardo.tech">
-                    <input type="hidden" name="_subject" value="Nuevo mensaje de la web!" />
+                    <input type="hidden" name="_next" value="https://nricardo.live/">
+                    <input type="hidden" name="_subject" value="New message from the PORTFOLIO" />
                     <input type="text" name="name" id="name" placeholder="Name" required />
                     <input type="email" name="email" id="email" placeholder="Email" required />
                     <input type="tel" name="number" id="number" placeholder="Phone number" />
