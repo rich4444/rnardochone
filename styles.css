@@ -31,6 +31,9 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 0;
 }
+body{
+  overflow-x: hidden;
+}
 
 /*#region color manager*/
 .main-color {
@@ -147,6 +150,18 @@ section {
   padding: 50px 0 150px 0;
   position: relative;
 }
+.toload{
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.toload:nth-of-type(even){
+  transform: translateX(50%);
+}
+.toload.loaded{
+  transform: translateX(0);
+  opacity: 1;
+}
 
 /* Section Titles */
 .sectionTitle {
@@ -240,7 +255,7 @@ header {
 .header--buttons {
   position: fixed;
   display: flex;
-  top: 20px;
+  top: 15px;
   left: 20px;
   font-size: 1.5rem;
   line-height: 1;
@@ -439,7 +454,7 @@ nav {
 
 nav ul {
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -1044,7 +1059,7 @@ footer p:hover {
   }
 
   nav {
-    padding: 20px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;

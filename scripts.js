@@ -198,6 +198,7 @@ function positionMouse(dist) {
 }
 
 function getOffset(el) {
+<<<<<<< HEAD
   const rect = el.getBoundingClientRect();
   return {
     left: rect.left + window.scrollX + el.clientWidth / 2,
@@ -219,4 +220,34 @@ const observer = new IntersectionObserver((entries) => {
 
 toAnimate.forEach((el) => {
   observer.observe(el);
+=======
+    const rect = el.getBoundingClientRect();
+    return {
+      left: rect.left + window.scrollX + el.clientWidth/2,
+      top: rect.top + window.scrollY + el.clientHeight/2
+    };
+  }
+
+  //Observer
+const toload = document.querySelectorAll(".toload");
+
+const options = {
+    root: null,
+    threshold: 0.05,
+    rootMargin: "-100px"
+};
+
+const observer = new IntersectionObserver(
+    function(entries, observer) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("loaded");
+                observer.unobserve(entry.target);
+            }
+        })
+    }, options);
+
+toload.forEach(section => {
+    observer.observe(section)
+>>>>>>> 56c2509162be34d1624b1359784458552c9763ae
 });
