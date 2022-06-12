@@ -31,6 +31,9 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 0;
 }
+body{
+  overflow-x: hidden;
+}
 
 /*#region color manager*/
 .main-color {
@@ -116,6 +119,16 @@ html {
 }
 /*#endregion Waves*/
 
+/* Intersection Observer */
+.toAnimate {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+.toAnimate.animated {
+  opacity: 1;
+}
+
 /*#region general styles*/
 h1 {
   font-size: 2.5rem;
@@ -136,6 +149,18 @@ section {
   height: 100%;
   padding: 50px 0 150px 0;
   position: relative;
+}
+.toload{
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+.toload:nth-of-type(even){
+  transform: translateX(50%);
+}
+.toload.loaded{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* Section Titles */
@@ -215,7 +240,7 @@ a {
 
 /*#region header*/
 header {
-  height: 100vh; 
+  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   position: relative;
   padding: 50px 0;
@@ -230,7 +255,7 @@ header {
 .header--buttons {
   position: fixed;
   display: flex;
-  top: 20px;
+  top: 15px;
   left: 20px;
   font-size: 1.5rem;
   line-height: 1;
@@ -282,7 +307,7 @@ header {
   background-position: center;
 }
 
-.pupil{
+.pupil {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -292,19 +317,19 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.eye{
+.eye {
   border-radius: 50%;
-  position: absolute;    
+  position: absolute;
   top: 50%;
   left: 50%;
-  
+
   background-color: white;
   width: 15px;
   height: 10px;
   transform: translate(-140%, -190%);
   overflow: hidden;
 }
-.eye:last-of-type{
+.eye:last-of-type {
   left: 69%;
 }
 
@@ -429,7 +454,7 @@ nav {
 
 nav ul {
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -1034,7 +1059,7 @@ footer p:hover {
   }
 
   nav {
-    padding: 20px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
