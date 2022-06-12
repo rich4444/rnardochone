@@ -202,3 +202,26 @@ function getOffset(el) {
       top: rect.top + window.scrollY + el.clientHeight/2
     };
   }
+
+  //Observer
+const toload = document.querySelectorAll(".toload");
+
+const options = {
+    root: null,
+    threshold: 0.05,
+    rootMargin: "-100px"
+};
+
+const observer = new IntersectionObserver(
+    function(entries, observer) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("loaded");
+                observer.unobserve(entry.target);
+            }
+        })
+    }, options);
+
+toload.forEach(section => {
+    observer.observe(section)
+});
