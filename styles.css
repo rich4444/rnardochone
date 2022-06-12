@@ -152,11 +152,11 @@ section {
 }
 
 .toload{
-  opacity: 0;
+  opacity: 1;
   transition: all 0.8s ease-in;
 }
 .toload.loaded{
-  opacity: 1;
+  opacity: 0;
 }
 
 /* Section Titles */
