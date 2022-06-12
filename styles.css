@@ -150,16 +150,12 @@ section {
   padding: 50px 0 150px 0;
   position: relative;
 }
+
 .toload{
-  transform: translateX(-50%);
   opacity: 0;
-  transition: all 0.5s ease-in;
-}
-.toload:nth-of-type(even){
-  transform: translateX(50%);
+  transition: all 0.8s ease-in;
 }
 .toload.loaded{
-  transform: translateX(0);
   opacity: 1;
 }
 
@@ -454,7 +450,7 @@ nav {
 
 nav ul {
   margin: 0;
-  padding: 10px;
+  padding: 10px 30px;
   display: flex;
   align-items: center;
   justify-content: right;
