@@ -35,6 +35,32 @@ body{
   overflow-x: hidden;
 }
 
+/* SCROLLBAR */
+::-webkit-scrollbar{
+  width: 0.5rem;
+}
+::-webkit-scrollbar:hover{
+  width: 1rem;
+}
+::-webkit-scrollbar-track{
+  background: rgb(131, 131, 131);
+}
+::-webkit-scrollbar-thumb{
+  background: rgb(68, 68, 68);
+  border: 1px solid rgb(131, 131, 131);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: rgb(29, 29, 29);
+  border-radius: 10px;
+}
+@supports (scrollbar-color: red blue){
+  *{
+    scrollbar-color: rgb(68, 68, 68) rgb(131, 131, 131);
+    scrollbar-width: thin;
+  }
+}
+
 /*#region color manager*/
 .main-color {
   background-color: var(--main-dark-color);
