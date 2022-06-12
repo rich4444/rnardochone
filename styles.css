@@ -116,6 +116,16 @@ html {
 }
 /*#endregion Waves*/
 
+/* Intersection Observer */
+.toAnimate {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+.toAnimate.animated {
+  opacity: 1;
+}
+
 /*#region general styles*/
 h1 {
   font-size: 2.5rem;
@@ -215,7 +225,7 @@ a {
 
 /*#region header*/
 header {
-  height: 100vh; 
+  height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   position: relative;
   padding: 50px 0;
@@ -282,7 +292,7 @@ header {
   background-position: center;
 }
 
-.pupil{
+.pupil {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -292,19 +302,19 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.eye{
+.eye {
   border-radius: 50%;
-  position: absolute;    
+  position: absolute;
   top: 50%;
   left: 50%;
-  
+
   background-color: white;
   width: 15px;
   height: 10px;
   transform: translate(-140%, -190%);
   overflow: hidden;
 }
-.eye:last-of-type{
+.eye:last-of-type {
   left: 69%;
 }
 

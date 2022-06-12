@@ -169,13 +169,13 @@ function closeNavBar() {
 // // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // // Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 // // We listen to the resize event
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   // We execute the same script as before
   let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
 
 //Googlie eyes
@@ -183,22 +183,40 @@ const eye = document.getElementsByClassName("eye");
 const pupil = document.querySelectorAll(".pupil");
 
 document.addEventListener("mousemove", (e) => {
-    for(let i = 0; i < pupil.length; i++){
-      let distX = e.clientX-getOffset(eye[i]).left;
-      let distY = e.clientY-getOffset(eye[i]).top;
-      pupil[i].style.transform = `translate(${positionMouse(distX)}%, ${positionMouse(distY)}%)`;
-    }
-})
+  for (let i = 0; i < pupil.length; i++) {
+    let distX = e.clientX - getOffset(eye[i]).left;
+    let distY = e.clientY - getOffset(eye[i]).top;
+    pupil[i].style.transform = `translate(${positionMouse(
+      distX
+    )}%, ${positionMouse(distY)}%)`;
+  }
+});
 
-function positionMouse (dist){
-  let newValue = (((dist + 100) * 100) / 200) -100;
-  return Math.min(Math.max(newValue, -100), 0)
+function positionMouse(dist) {
+  let newValue = ((dist + 100) * 100) / 200 - 100;
+  return Math.min(Math.max(newValue, -100), 0);
 }
 
 function getOffset(el) {
-    const rect = el.getBoundingClientRect();
-    return {
-      left: rect.left + window.scrollX + el.clientWidth/2,
-      top: rect.top + window.scrollY + el.clientHeight/2
-    };
-  }
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX + el.clientWidth / 2,
+    top: rect.top + window.scrollY + el.clientHeight / 2,
+  };
+}
+
+//Intersection Observer
+const toAnimate = document.querySelectorAll(".toAnimate");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animated");
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+toAnimate.forEach((el) => {
+  observer.observe(el);
+});
